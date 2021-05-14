@@ -1,32 +1,53 @@
 :root{
-    --bckgrnd: darkblue;
-    --txtCol: cyan;
+    --dark: darkblue;
+    --light: red;
+    --padding: 10px;
 }
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--bckgrnd);
-    color: var(--txtCol);
-    padding: 12px;
-    padding-left: 0px;
-}
-h1 {
 
-    background-color: var(--txtCol);
-    font-size: 200%;
-    padding: 5px;
-    padding-left: 30px;
-    color: darkblue;
+header {
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 180%;
+    padding: var(--padding);
 }
 nav{
-    padding-top:12px;
-    padding-right: 30px;
+    color: var(--dark);
+    background-color: var(--light);
+    padding: var(--padding);
+}
+nav a {
+    font-size: 100%;
+    text-decoration: none;
+    color: var(--dark);
+    border-bottom: 2px var(--dark) dashed;
+    padding: 1px var(--padding);
+}
+
+figure {
+    height: 130px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-image: url("./Pokemon.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    align-items: flex-end;
+}
+
+figure h2 {
+    position: absolute;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 5px;
+    margin-bottom: 2px;
+
+}
+
+.flexMiddle {
+    display: flex;
     justify-content: center;
 }
-a {
-    color: cyan;
-    text-decoration: none;
-    padding: 12px;
-    padding-bottom: 3px;
-    border-bottom: 3px solid cyan;
+
+.row {
+    
 }
