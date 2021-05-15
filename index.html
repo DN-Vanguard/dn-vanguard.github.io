@@ -5,32 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Nguyen's Portfolio</title>
+    <!-- Linked with regular stylesheet and reset style sheet -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
+    <div class="flexBetween">
+        <header class="flexMiddle">
+            <h1>Domiltan Nguyen</h1>
+        </header>
 
-    <header class="flexMiddle">
-        <h1>Domiltan Nguyen</h1>
-    </header>
-
-    <nav class="flexMiddle">
-        <ul>
-            <li><a href="#aboutMe">About Me</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contactMe">Contact Me</a></li>
-            <li><a href="https://github.com/DN-Vanguard">Resume</a></li>
-        </ul>
-    </nav>
-
+        <nav class="flexMiddle">
+            <ul>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contactMe">Contact Me</a></li>
+                <li><a href="https://github.com/DN-Vanguard">Resume</a></li>
+            </ul>
+        </nav>
+    </div>
+<!-- ^^ is the header and navagation panel. They are linked with their respective counterparts -->
     <figure class="flexMiddle" title="Gen 1 Starter 3rd Evolutions">
         <h2>Starters are top tier!</h2>
     </figure>
-
+<!-- ^^ This is the background picture you see as the website is opened -->
     <aside class="column" id="aboutMe" >
-        <section>
+        <section class="row">
             <h3>About Me</h3>
+            <div class="rowAligned">
                 <p>
                 Hi there! My name is Domiltan Nguyen, but everyone calls me Dom.
                 A little about me, I was born and raised in Seattle, WA, I like listening to kpop, playing tennis, and love Pokemon.
@@ -51,16 +54,17 @@
                 </p>
                 <br>
                 <br>
+            </div>
         </section>
     </aside>
-
-    <main class="column" id="work">
+<!-- ^^ I labeled this Aside because although it is one of the first things you read, it is not highly relevant to be labeled main  -->
+    <main class="column" class="row"id="work">
         <h3>Work</h3>
-            <section class="my-container">
+            <section class="my-container" class="rowAligned">
                 <div class="portfolio-grid">
 
                     <div class="portfolio-items">
-                        <a href="https://github.com/DN-Vanguard" target="_blank" alt="Go to project 1"></a>
+                        <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 1"></a>
                         <img src="./02-Homework/Assets/Charmander-Line.jpeg" alt="Charmander">
                         <div class="portfolio-text">
                             <h4>Project 1</h4>
@@ -69,7 +73,7 @@
                     </div>
 
                     <div class="portfolio-items">
-                        <a href="https://github.com/DN-Vanguard" target="_blank" alt="Go to project 2"></a>
+                        <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 2"></a>
                         <img src="./02-Homework/Assets/Squirtle-Line.jpeg" alt="Squirtle">
                         <div class="portfolio-text">
                             <h4>Project 2</h4>
@@ -78,7 +82,7 @@
                     </div>
 
                     <div class="portfolio-items">
-                        <a href="https://github.com/DN-Vanguard" target="_blank" alt="Go to project 3"></a>
+                        <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 3"></a>
                         <img src="./02-Homework/Assets/Bulbasaur-Line.jpeg" alt="Bulbasaur">
                         <div class="portfolio-text">
                             <h4>Project 3</h4>
@@ -87,7 +91,7 @@
                     </div>
                     
                     <div class="portfolio-items">
-                        <a href="https://github.com/DN-Vanguard" target="_blank" alt="Go to project 4"></a>
+                        <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 4"></a>
                         <img src="./02-Homework/Assets/Mega-line.jpeg" alt="Mega Evolutions">
                         <div class="portfolio-text">
                             <h4>Project 4</h4>
@@ -96,7 +100,7 @@
                     </div>
 
                     <div class="portfolio-items">
-                        <a href="https://github.com/DN-Vanguard" target="_blank" alt="Go to project 5"></a>
+                        <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 5"></a>
                         <img src="./02-Homework/Assets/PokemonGo-line.jpeg" alt="Pokemon Go">
                         <div class="portfolio-text">
                             <h4>Project 5</h4>
@@ -107,17 +111,17 @@
                 </div>
             </section>
     </main>
-
+<!-- This whole section above shows the 5 projects I have completed. It is linked to my gitHub -->
     <footer class="column" id="contactMe">
         <h3>Contact Me</h3>
-            <ul>
-                <li><a href="https://github.com/DN-Vanguard">555-555-5555</a></li>
-                <li><a href="https://github.com/DN-Vanguard">dn-vanguard.github.io</a></li>
-                <li><a href="https://github.com/DN-Vanguard">Github</a></li>
+            <ul class="rowAligned">
+                <li><a href="https://github.com/DN-Vanguard/">555-555-5555</a></li>
+                <li><a href="https://github.com/DN-Vanguard/">dn-vanguard.github.io</a></li>
+                <li><a href="https://github.com/DN-Vanguard/">Github</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Spotify</a></li>
             </ul>
     </footer>
-
+<!-- The footer holds the contact info and ways to get in touch. -->
 </body>
 </html>
