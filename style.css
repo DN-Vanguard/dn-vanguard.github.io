@@ -8,7 +8,7 @@ header {
     background-color: var(--Cyan);
     color: var(--darkGrey);
     font-size: 180%;
-    padding: var(--spacing);
+    padding: 8px;
 }
 
 nav{
@@ -36,13 +36,13 @@ figure {
     background-image: url("./02-Homework/Assets/Pokemon.png");
     background-size: cover;
     background-position: center;
-    /* position: relative; */
+    position: relative;
     align-items: flex-end;
 }
 
 figure h2 {
     font-size: 150%;
-    /* position: absolute; */
+    position: absolute;
     background-color: var(--Cyan);
     color: var(--darkGrey);
     padding: 5px;
@@ -56,32 +56,77 @@ h3 {
     padding-bottom: 5px;
     font-size: 130%;
 }
+
+h4{
+    padding-top: 2px;
+    color: var(--darkGrey);
+}
+
+h5 {
+    font-size: 50%;
+    padding: 5px 5px 0px 0px;
+    color: var(--darkGrey);
+}
+
 p {
     margin-top: var(--spacing);
     color: var(--darkGrey);
     font-size: 85%;
 }
+
 footer ul {
     display: flex;
     flex-direction: column;
     margin-top: 8px;
 }
+
 footer li {
     padding-top: 7px;
     
 }
+
 footer a{
     font-size: 80%;
     color: var(--darkGrey);
     text-decoration: none;
     border-bottom: 2px solid var(--darkGrey);
     padding-bottom: 2px;
-
 }
 
+.my-container {
+    display: flex;
+}
 
+.portfolio-grid{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: var(--spacing);
+}
 
+.portfolio-items{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 100%;
+    padding: 5px;
+}
 
+.portfolio-items img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid var(--Cyan);
+    position: relative;
+    opacity: .4;
+}
+.portfolio-items img:hover {
+    opacity: 1;
+}
+.portfolio-text{
+    position: absolute;
+    background-color: var(--Cyan);
+    margin-top: 45px;
+    padding: 5px;
+}
 
 .flexMiddle {
     display: flex;
