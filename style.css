@@ -2,26 +2,23 @@
 :root{
     --darkGrey: #31343d;
     --Cyan: #92ccce;
-    --spacing: 14px;
+    --spacing: 12px;
+    --padding: 5px;
 }
-
 header {
     background-color: var(--Cyan);
     color: var(--darkGrey);
     font-size: 180%;
     padding: 8px;
 }
-
 nav{
     color: var(--Cyan);
     background-color: var(--darkGrey);
     padding: var(--spacing);
 }
-
 nav li {
     display: inline-block;
 }
-
 nav a {
     font-size: 90%;
     text-decoration: none;
@@ -32,7 +29,6 @@ nav a {
 /* ^^Everything above are styling element selectors for the header and nav  */
 figure {
     height: 200px;
-    width: 100%;
     margin-bottom: 20px;
     background-image: url("./02-Homework/Assets/Pokemon.png");
     background-size: cover;
@@ -40,53 +36,45 @@ figure {
     position: relative;
     align-items: flex-end;
 }
-
 figure h2 {
     font-size: 150%;
     position: absolute;
     background-color: var(--Cyan);
     color: var(--darkGrey);
-    padding: 5px;
+    padding: var(--padding);
     margin-bottom: 5px;
 }
 /* Styling for the background image ^^ */
+p {
+    margin-top: var(--spacing);
+    color: var(--darkGrey);
+    font-size: 90%;
+}
+/* This is used only in the "about me" section ^^ */
 h3 {
     color: var(--darkGrey);
     border-bottom: var(--darkGrey) solid;
-    width: 100%;
     padding-bottom: 5px;
-    font-size: 130%;
+    font-size: 150%;
 }
-
 h4{
     padding-top: 2px;
     color: var(--darkGrey);
 }
-
 h5 {
     font-size: 50%;
     padding: 5px 5px 0px 0px;
     color: var(--darkGrey);
 }
-/* The heading tags are scattered through out the webpage */
-p {
-    margin-top: var(--spacing);
-    color: var(--darkGrey);
-    font-size: 85%;
-}
-/* This is used only in the "about me" section ^^ */
-
+/* The heading tags are scattered through out the webpage and are styled accordingly */
 footer ul {
     display: flex;
     flex-direction: column;
-    margin-top: 8px;
+    margin-top: 5px;
 }
-
 footer li {
     padding-top: 7px;
-    
 }
-
 footer a{
     font-size: 80%;
     color: var(--darkGrey);
@@ -95,54 +83,49 @@ footer a{
     padding-bottom: 2px;
 }
 /* The footers styling elements ^^ */
-.my-container {
+.flexMiddle {
     display: flex;
+    justify-content: center;
 }
-/* overall container for the work section */
+/* For mobile view, some sections needed to be centered */
+.columnAndRow{
+    padding: 0 16px 16px 16px;
+}
+/* Everything within "main" has a column tag and this helps with spacing issues */
 .portfolio-grid{
     display: flex;
     flex-wrap: wrap;
     padding-top: var(--spacing);
+    padding-bottom: var(--spacing);
 }
 /* secondary container for the work section */
 .portfolio-items{
     display: flex;
     flex-direction: column;
-    flex: 1 0 100%;
-    padding: 5px;
-    height: 100px;
+    flex: 0 0 100%;
+    padding: var(--padding);
+    height: 130px;
 }
 
 .portfolio-items img {
-    height: 100%;
+    height: 120px;
     width: 100%;
     object-fit: cover;
     border: 3px solid var(--Cyan);
     position: relative;
     opacity: .4;
 }
-
 .portfolio-items img:hover {
     opacity: 1;
 }
-/* The images in the work section. We also have a hovering effect */
+/* The items and imgs styling classes in the work section. We also have a hovering effect */
 .portfolio-text{
     position: absolute;
     background-color: var(--Cyan);
-    margin-top: 35px;
+    margin-top: 60px;
     padding: 5px;
 }
 /* This is the small textbox that is within the portfolio items */
-.flexMiddle {
-    display: flex;
-    justify-content: center;
-}
-/* For mobile view, some sections were needed to be centered */
-.column {
-    flex-direction: column;
-    padding: 0 var(--spacing) var(--spacing) var(--spacing);
-}
-/* for mobile view, this added the border control and padding corrected */
 
 @media screen and (min-width:850px) {
     .flexBetween {
@@ -153,7 +136,6 @@ footer a{
         padding-top: 10px;
         padding-bottom: 10px;
     }
-
     h1 {
         padding-left: 30px;
     }
@@ -161,72 +143,47 @@ footer a{
     figure{
         background-size: 30%;
     }
-    
     figure h2 {
         margin-left: 1500px;
         margin-bottom: var(--spacing);
     }
-/* Had to update the background image sizing for web view */
-    
+/* Had to update the background image sizing for web view and move the figure to the right side from */
+    .columnAndRow{
+        display: flex;
+    }
+    .rowLineUp{
+        padding-left: 20px;
+    }
     h3 {
-        flex-wrap: wrap;
-        font-size: 200%;
+        font-size: 300%;
         border-right: solid var(--darkGrey);
         color: var(--darkGrey);
         text-align: right;
-        width: 130px;
+        /* width: 100px; */
         border-bottom: 0;
         margin-left: 50px;
         padding-right: 10px;
     }
     
-    aside h3 {
-        padding-right: 10px;
-        margin-right: 10px;
-    }
-    main h3 {
-        margin-left: 88px;
-    }
-
-
     /* To get the border looking like the mockup */
 
-    .column {
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: row;
-    }
-
-    .row {
-        display: flex;
-        justify-content: flex-end;
-        margin: 20px 5% 50px auto;
-    }
-
-    .rowAligned {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 40px;
-    }
     .portfolio-grid{
         display: flex;
         flex-wrap: wrap;
-        padding-left: 20px;
+        /* padding-left: 20px; */
     }
     
     .portfolio-items{
         display: flex;
         flex-wrap: wrap;
-        justify-content: ce;
-        flex-grow: 0;
+        flex-grow: 1;
         flex-shrink: 0;
         flex-basis: 50%;
         margin-bottom: 10px;
     }
     .portfolio-items:first-child{
         flex-basis: 100%;
-        height: 500px;
+        /* height: 100; */
     }
 
     /* In the work section, these classes had to be updated for web view */
