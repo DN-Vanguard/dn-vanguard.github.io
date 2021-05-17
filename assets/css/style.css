@@ -2,6 +2,7 @@
 :root{
     --darkGrey: #31343d;
     --Cyan: #92ccce;
+    --sectionGrey: #445877;
     --spacing: 12px;
     --padding: 5px;
 }
@@ -30,7 +31,7 @@ nav a {
 figure {
     height: 200px;
     margin-bottom: 20px;
-    background-image: url("./02-Homework/Assets/Pokemon.png");
+    background-image: url("../images/Pokemon.png");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -47,13 +48,13 @@ figure h2 {
 /* Styling for the background image ^^ */
 p {
     margin-top: var(--spacing);
-    color: var(--darkGrey);
+    color: var(--sectionGrey);
     font-size: 90%;
 }
 /* This is used only in the "about me" section ^^ */
 h3 {
-    color: var(--darkGrey);
-    border-bottom: var(--darkGrey) solid;
+    color: var(--sectionGrey);
+    border-bottom: var(--sectionGrey) solid;
     padding-bottom: 5px;
     font-size: 150%;
 }
@@ -67,28 +68,28 @@ h5 {
     color: var(--darkGrey);
 }
 /* The heading tags are scattered through out the webpage and are styled accordingly */
-footer ul {
+.column-row ul {
     display: flex;
     flex-direction: column;
     margin-top: 5px;
 }
-footer li {
+.column-row li {
     padding-top: 7px;
 }
-footer a{
+.column-row ul li a{
     font-size: 80%;
-    color: var(--darkGrey);
+    color: var(--sectionGrey);
     text-decoration: none;
-    border-bottom: 2px solid var(--darkGrey);
-    padding-bottom: 2px;
+    border-bottom: 3px solid var(--sectionGrey);
+    padding: 0 2px 2px 2px;
 }
-/* The footers styling elements ^^ */
+/* The "contact me" styling elements ^^ */
 .flexMiddle {
     display: flex;
     justify-content: center;
 }
 /* For mobile view, some sections needed to be centered */
-.columnAndRow{
+.column-row{
     padding: 0 16px 16px 16px;
 }
 /* Everything within "main" has a column tag and this helps with spacing issues */
@@ -98,22 +99,22 @@ footer a{
     padding-top: var(--spacing);
     padding-bottom: var(--spacing);
 }
-/* secondary container for the work section */
+/* Container for the work section */
 .portfolio-items{
     display: flex;
     flex-direction: column;
     flex: 0 0 100%;
-    padding: var(--padding);
-    height: 130px;
-}
-
-.portfolio-items img {
-    height: 120px;
-    width: 100%;
-    object-fit: cover;
+    margin: 0 auto 10px auto;
+    height: 106px;
     border: 3px solid var(--Cyan);
     position: relative;
+}
+.portfolio-items img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
     opacity: .4;
+    transition: opacity .5s;
 }
 .portfolio-items img:hover {
     opacity: 1;
@@ -122,11 +123,13 @@ footer a{
 .portfolio-text{
     position: absolute;
     background-color: var(--Cyan);
-    margin-top: 60px;
+    margin-top: 45px;
     padding: 5px;
 }
 /* This is the small textbox that is within the portfolio items */
 
+
+/* WEB VIEW */
 @media screen and (min-width:850px) {
     .flexBetween {
         display: flex;
@@ -144,58 +147,54 @@ footer a{
         background-size: 30%;
     }
     figure h2 {
-        margin-left: 1500px;
         margin-bottom: var(--spacing);
+        margin-right: 30px;
     }
-/* Had to update the background image sizing for web view and move the figure to the right side from */
-    .columnAndRow{
+    .flexMiddle{
         display: flex;
+        justify-content: flex-end;
+    }
+/* Had to update the background image sizing for web view and move the figure to the right side */
+    .column-row{
+        display: flex;
+        margin-left: 100px;
+        margin-right: 50px;
     }
     .rowLineUp{
-        padding-left: 20px;
+        padding-left: 30px;
+        width: 90%;
     }
     h3 {
-        font-size: 300%;
-        border-right: solid var(--darkGrey);
-        color: var(--darkGrey);
-        text-align: right;
-        /* width: 100px; */
+        font-size: 1.8rem;
+        border-right: solid var(--sectionGrey);
+        color: var(--sectionGrey);
         border-bottom: 0;
-        margin-left: 50px;
         padding-right: 10px;
+        text-align: right;
+        width: 120px;
     }
-    
-    /* To get the border looking like the mockup */
-
-    .portfolio-grid{
-        display: flex;
-        flex-wrap: wrap;
-        /* padding-left: 20px; */
-    }
-    
+    /* Columns and h3 tags are lined up and neat */
     .portfolio-items{
-        display: flex;
-        flex-wrap: wrap;
-        flex-grow: 1;
-        flex-shrink: 0;
-        flex-basis: 50%;
-        margin-bottom: 10px;
+        flex: 0 0 49.25%;
     }
-    .portfolio-items:first-child{
-        flex-basis: 100%;
-        /* height: 100; */
+    .portfolio-items:first-child {
+        flex-basis: 99.3%;
+        height: 400px;
     }
-
-    /* In the work section, these classes had to be updated for web view */
-    footer ul {
-        display: flex;
-        justify-content: space-evenly;
+    .portfolio-items:first-child img{
+        height: 394px;
     }
-
-    /* Displaying the footer for web view */
-
-
-
-
-
+    #project1{
+        margin-top: 338px;
+    }
+    /* In the "work" section, these classes and an ID had to be updated for web view */
+    .column-row ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .column-row ul li a{
+        font-size: 100%;
+        padding: 0 8px 2px 8px;
+    }
+    /* "Contact me" has been reajusted to fit web view */
 }

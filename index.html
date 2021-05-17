@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Nguyen's Portfolio</title>
     <!-- Linked with regular stylesheet and reset style sheet -->
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     
 </head>
 <body>
@@ -32,7 +32,7 @@
     </figure>
 <!-- ^^ This is the background picture you see as the website is opened -->
     <main>
-        <section class="columnAndRow" id="aboutMe">
+        <section class="column-row" id="aboutMe">
                 <h3>About Me</h3>
                 <div class="rowLineUp">
                     <p>
@@ -57,16 +57,16 @@
                     <br>
                 </div>
         </section>
-    <!-- About me page ^^ -->
-        <section class="columnAndRow" id="work">
+        <!-- About me page ^^ -->
+        <section class="column-row" id="work">
             <h3>Work</h3>
             <div class="rowLineUp">
                 <div class="portfolio-grid">
                     <!-- Container for porfolio-items ^^ -->
                     <div class="portfolio-items">
                         <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 1">
-                        <img src="./02-Homework/Assets/Charmander-Line.jpeg" alt="Charmander"></a>
-                        <div class="portfolio-text">
+                        <img src="./assets/images/Charmander-Line.jpeg" alt="Charmander"></a>
+                        <div class="portfolio-text" id="project1">
                             <h4>Project 1</h4>
                             <h5>Fire Pokemon</h5>
                         </div>
@@ -74,7 +74,7 @@
                     <!-- Project 1 -->
                     <div class="portfolio-items">
                         <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 2">
-                        <img src="./02-Homework/Assets/Squirtle-Line.jpeg" alt="Squirtle"></a>
+                        <img src="./assets/images/Squirtle-Line.jpeg" alt="Squirtle"></a>
                         <div class="portfolio-text">
                             <h4>Project 2</h4>
                             <h5>Water Pokemon</h5>
@@ -83,7 +83,7 @@
                     <!-- Project 2 -->
                     <div class="portfolio-items">
                         <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 3">
-                        <img src="./02-Homework/Assets/Bulbasaur-Line.jpeg" alt="Bulbasaur"></a>
+                        <img src="./assets/images/Bulbasaur-Line.jpeg" alt="Bulbasaur"></a>
                         <div class="portfolio-text">
                             <h4>Project 3</h4>
                             <h5>Grass Pokemon</h5>
@@ -92,7 +92,7 @@
                     <!-- Project 3 -->
                     <div class="portfolio-items">
                         <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 4">
-                        <img src="./02-Homework/Assets/Mega-line.jpeg" alt="Mega Evolutions"></a>
+                        <img src="./assets/images/Mega-line.jpeg" alt="Mega Evolutions"></a>
                         <div class="portfolio-text">
                             <h4>Project 4</h4>
                             <h5>Mega Evolution</h5>
@@ -101,7 +101,7 @@
                     <!-- Project 4 -->
                     <div class="portfolio-items">
                         <a href="https://github.com/DN-Vanguard/dn-vanguard.github.io" target="_blank" alt="Go to project 5">
-                        <img src="./02-Homework/Assets/PokemonGo-line.jpeg" alt="Pokemon Go"></a>
+                        <img src="./assets/images/PokemonGo-line.jpeg" alt="Pokemon Go"></a>
                         <div class="portfolio-text">
                             <h4>Project 5</h4>
                             <h5>Pokemon Go</h5>
@@ -111,9 +111,9 @@
                 </div>
             </div>
         </section>
-<!-- This whole section above shows the 5 projects completed. It is linked to my gitHub -->
-        <footer class="columnAndRow" id="contactMe">
-        <h3>Contact Me</h3>
+<!-- This "work" section above shows the 5 projects completed. It is linked to my gitHub -->
+        <section class="column-row" id="contactMe">
+            <h3>Contact Me</h3>
             <ul class="rowLineUp">
                 <li><a href="https://github.com/DN-Vanguard/">555-555-5555</a></li>
                 <li><a href="https://github.com/DN-Vanguard/">dn-vanguard.github.io</a></li>
@@ -121,9 +121,9 @@
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Spotify</a></li>
             </ul>
-        </footer>
-
+        </section>
+<!-- The "contact me" holds the contact info and ways to get in touch. -->
     </main>
-<!-- The footer holds the contact info and ways to get in touch. -->
+
 </body>
 </html>
